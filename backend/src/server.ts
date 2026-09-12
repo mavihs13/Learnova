@@ -1,0 +1,13 @@
+import express from 'express';
+const app = express();
+const port  = 4040;
+
+app.get('/api/health',(req,res)=>{
+    res.json({
+        status:"ok"
+    })
+})
+
+app.listen(port,()=>{
+    console.log(`Server is running on port ${port}`)
+})
